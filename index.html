@@ -1,0 +1,235 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Developer Portfolio & Services</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+
+  <body>
+    <aside id="side-bar">
+      <div class="sidebar-brand"><span class="dot"></span> Portfolio</div>
+      <button id="theme-button">Toggle Light/Dark</button>
+    </aside>
+
+    <header>
+      <h1>Software Developer Portfolio</h1>
+      <p id="opening-status"></p>
+      <p>Building high-performance web applications and databases.</p>
+
+      <nav class="header-nav">
+        <a href="#about">About Me</a> | <a href="#projects">Projects</a> |
+        <a href="#services">Services</a> | <a href="#experience">Education</a> |
+        <a href="#contact">Contact Form</a>
+      </nav>
+    </header>
+    <main>
+      <section id="about">
+        <article>
+          <h2>About Me</h2>
+          <p>
+            Hello! I am a full-stack software development enthusiast
+            specializing in React, Spring Boot, and relational database design.
+          </p>
+
+          <p id="extra-about" class="hidden">
+            I focus on building clean architecture, writing scalable REST APIs,
+            and crafting fast, accessible user interfaces. Constant learning and
+            hands-on engineering are at the core of my daily routine.
+          </p>
+
+          <button id="read-more-button" class="btn btn-secondary">
+            Read More
+          </button>
+        </article>
+
+        <br />
+        <button onclick="showMessage()" class="btn btn-primary">
+          Say Hello
+        </button>
+      </section>
+
+      <section id="projects">
+        <h2>Featured Projects</h2>
+
+        <div class="filter-buttons">
+          <button class="filter-button active" data-category="all">All</button>
+          <button class="filter-button" data-category="web">Web Dev</button>
+          <button class="filter-button" data-category="programming">
+            Software / DB
+          </button>
+        </div>
+
+        <div class="course-card" data-category="web">
+          <h3>Full-Stack Web App</h3>
+          <p>
+            Interactive web application built with modern component structures
+            and responsive design.
+          </p>
+          <a href="https://github.com" target="_blank" class="card-link"
+            >View Source Code &rarr;</a
+          >
+        </div>
+
+        <div class="course-card" data-category="programming">
+          <h3>Database & REST API Service</h3>
+          <p>
+            Relational database schema designed with Spring Boot APIs and SQL
+            Server integration.
+          </p>
+          <a href="https://github.com" target="_blank" class="card-link"
+            >View Documentation &rarr;</a
+          >
+        </div>
+
+        <div class="course-card" data-category="programming">
+          <h3>Shortest Path & Algorithm Engine</h3>
+          <p>
+            Data structures and algorithms project visualizing shortest path
+            calculations.
+          </p>
+          <a href="https://github.com" target="_blank" class="card-link"
+            >View Algorithms &rarr;</a
+          >
+        </div>
+      </section>
+
+      <section id="services">
+        <h2>Freelance Services & Instant Estimator</h2>
+        <p class="section-desc">
+          Select the development services you need for an instant project cost
+          estimate:
+        </p>
+
+        <div class="services-grid">
+          <label class="service-card">
+            <input type="checkbox" class="service-item" value="50" />
+            <div class="service-info">
+              <span class="service-title">Frontend UI Development</span>
+              <span class="service-price">$50</span>
+            </div>
+          </label>
+
+          <label class="service-card">
+            <input type="checkbox" class="service-item" value="80" />
+            <div class="service-info">
+              <span class="service-title">JavaScript Integration</span>
+              <span class="service-price">$80</span>
+            </div>
+          </label>
+
+          <label class="service-card">
+            <input type="checkbox" class="service-item" value="100" />
+            <div class="service-info">
+              <span class="service-title">Backend API & Database Work</span>
+              <span class="service-price">$100</span>
+            </div>
+          </label>
+        </div>
+
+        <p id="total">Selected Services Total: $0</p>
+      </section>
+
+      <section id="experience">
+        <h2>Education & Experience</h2>
+
+        <div class="table-wrap">
+          <table id="experience-table">
+            <thead>
+              <tr>
+                <th>Role / Focus</th>
+                <th>Organization</th>
+                <th>Timeline</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>Software Engineering Intern</td>
+                <td>Fauji Foundation</td>
+                <td>Summer 2026</td>
+              </tr>
+              <tr>
+                <td>Computer Science Student</td>
+                <td>University</td>
+                <td>2023 - Present</td>
+              </tr>
+              <tr>
+                <td>Higher Secondary Student</td>
+                <td>College</td>
+                <td>2021 - 2023</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </section>
+
+      <section id="contact">
+        <h2>Contact & Project Inquiry Form</h2>
+
+        <form id="contactForm">
+          <div class="form-group">
+            <label for="useR">Your Name:</label>
+            <input
+              type="text"
+              id="useR"
+              name="user_name"
+              placeholder="John Doe"
+            />
+          </div>
+
+          <div class="form-group">
+            <label for="user-email">Your Email:</label>
+            <input
+              type="email"
+              id="user-email"
+              name="user_email"
+              placeholder="john@example.com"
+            />
+          </div>
+
+          <div class="form-group">
+            <label for="birth-year"
+              >Birth Year (Student/Senior Discount Verification):</label
+            >
+            <input type="text" id="birth-year" placeholder="e.g. 2002" />
+          </div>
+
+          <div class="form-group">
+            <label for="special-notes"
+              >Special Instructions / Project Scope:</label
+            >
+            <textarea
+              id="special-notes"
+              maxlength="100"
+              rows="3"
+              placeholder="Describe your request..."
+            ></textarea>
+            <span id="character-count">100 characters remaining</span>
+          </div>
+
+          <div class="form-actions">
+            <input
+              type="submit"
+              value="Submit Request"
+              class="btn btn-primary"
+            />
+            <input type="reset" value="Reset" class="btn btn-secondary" />
+          </div>
+        </form>
+
+        <p id="form-message"></p>
+        <p id="discount-message"></p>
+      </section>
+    </main>
+
+    <footer>
+      <p>
+        Copyright &copy; 2026 - Developer Portfolio Page. Submitted for
+        Assignment.
+      </p>
+    </footer>
+
+    <script src="script.js"></script>
+  </body>
+</html>
